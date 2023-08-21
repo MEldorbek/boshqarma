@@ -16,26 +16,35 @@
             color: #6a6f77;
             transition: all 0.5s;
             position: relative;
-            &::after{
+            &::after {
                 content: "";
                 position: absolute;
                 width: 0;
                 height: 2px;
                 border-radius: 2px;
-                background-color: #FF7B29;
+                background-color: #ff7b29;
                 bottom: -3px;
                 left: 2px;
-                transition: all .5s;
+                transition: all 0.5s;
             }
         }
         & + li {
             margin-left: 34px;
         }
-    }
-    & li:hover a{
-        color: #2d3134;
-        &::after{
-            width: 12px;
+        &:hover a {
+            color: #2d3134;
+            &::after {
+                width: 12px;
+            }
+        }
+        &:nth-last-child(1) a {
+            padding: 16px 22px;
+            background: #ff7b29;
+            border-radius: 8px;
+            color: #ffffff;
+            &::after {
+                content: none;
+            }
         }
     }
 }
